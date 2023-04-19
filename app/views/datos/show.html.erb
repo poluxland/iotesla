@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @dato %>
+
+<div>
+  <%= link_to "Edit this dato", edit_dato_path(@dato) %> |
+  <%= link_to "Back to datos", datos_path %>
+
+  <%= button_to "Destroy this dato", @dato, method: :delete %>
+</div>

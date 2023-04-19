@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  field1: 1.5
+  field2: 1.5
+  field3: 1.5
+  field4: 1
+  field5: MyString
+  field6: MyString
+
+two:
+  field1: 1.5
+  field2: 1.5
+  field3: 1.5
+  field4: 1
+  field5: MyString
+  field6: MyString

@@ -1,0 +1,47 @@
+<%= form_with(model: dato) do |form| %>
+  <% if dato.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(dato.errors.count, "error") %> prohibited this dato from being saved:</h2>
+
+      <ul>
+        <% dato.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :field1, style: "display: block" %>
+    <%= form.text_field :field1 %>
+  </div>
+
+  <div>
+    <%= form.label :field2, style: "display: block" %>
+    <%= form.text_field :field2 %>
+  </div>
+
+  <div>
+    <%= form.label :field3, style: "display: block" %>
+    <%= form.text_field :field3 %>
+  </div>
+
+  <div>
+    <%= form.label :field4, style: "display: block" %>
+    <%= form.number_field :field4 %>
+  </div>
+
+  <div>
+    <%= form.label :field5, style: "display: block" %>
+    <%= form.text_field :field5 %>
+  </div>
+
+  <div>
+    <%= form.label :field6, style: "display: block" %>
+    <%= form.text_field :field6 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
