@@ -1,14 +1,38 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Datos</h1>
 
-<div id="datos">
-  <% @datos.each do |dato| %>
-    <%= render dato %>
-    <p>
-      <%= link_to "Show this dato", dato %>
-    </p>
-  <% end %>
-</div>
+<table class="table table-striped table-bordered shadow table-bordered m-3" style="width: 1200px;">
 
-<%= link_to "New dato", new_dato_path %>
+  <thead>
+    <tr>
+      <th>Creado</th>
+      <th>Field 1</th>
+      <th>Field 2</th>
+      <th>Field 3</th>
+      <th>Field 4</th>
+      <th>Field 5</th>
+      <th>Field 6</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @datos.each do |dato| %>
+      <tr id="<%= dom_id dato %>">
+        <td><%= dato.created_at %></td>
+        <td><%= dato.field1 %></td>
+        <td><%= dato.field2 %></td>
+        <td><%= dato.field3 %></td>
+        <td><%= dato.field4 %></td>
+        <td><%= dato.field5 %></td>
+        <td><%= dato.field6 %></td>
+        <td>
+          <%= link_to "Ver", dato, class: "btn btn-primary" %>
+          <%= link_to "Editar", edit_dato_path(dato), class: "btn btn-secondary" %>
+          <%= link_to "Borrar", dato, method: :delete, data: { confirm: "Esta seguro?" }, remote: true, class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to "Agregar dato", new_dato_path,  class: "btn btn-primary" %>
