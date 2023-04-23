@@ -1,5 +1,33 @@
 <h1>Datos</h1>
 
+
+
+
+<%= line_chart [
+  {name: 'Sensor 1 Temp', data: Dato.pluck(:created_at, :sensor1)},
+  {name: 'Sensor 2 Temp', data: Dato.pluck(:created_at, :sensor2)},
+  {name: 'Sensor 3 Temp', data: Dato.pluck(:created_at, :sensor3)},
+  {name: 'Sensor 4 Temp', data: Dato.pluck(:created_at, :sensor4)},
+  {name: 'Sensor 5 Temp', data: Dato.pluck(:created_at, :sensor5)},
+  {name: 'Sensor 6 Temp', data: Dato.pluck(:created_at, :sensor6)},
+  {name: 'Sensor 7 Humedad', data: Dato.pluck(:created_at, :sensor7)},
+  {name: 'Sensor 8 Corriente', data: Dato.pluck(:created_at, :sensor8)},
+  {name: 'Sensor 9 Corriente', data: Dato.pluck(:created_at, :sensor9)},
+  {name: 'Sensor 10 Corriente', data: Dato.pluck(:created_at, :sensor10)},
+  {name: 'Sensor 11 psi', data: Dato.pluck(:created_at, :sensor11)},
+  {name: 'Sensor 12 psi', data: Dato.pluck(:created_at, :sensor12)},
+  {name: 'Sensor 13 m/s', data: Dato.pluck(:created_at, :sensor13)},
+  {name: 'Sensor 14 alarma', data: Dato.pluck(:created_at, :sensor14)},
+  {name: 'Sensor 15 alarma', data: Dato.pluck(:created_at, :sensor15)},
+  {name: 'Sensor 16 alarma', data: Dato.pluck(:created_at, :sensor16)},
+  {name: 'Sensor 17 alarma', data: Dato.pluck(:created_at, :sensor17)},
+  {name: 'Sensor 18 alarma', data: Dato.pluck(:created_at, :sensor18)}
+] %>
+
+
+
+
+
 <table class="table table-striped table-bordered shadow table-bordered m-3" style="width: 1200px;">
 
   <thead>
@@ -18,7 +46,7 @@
       <th>Sensor 10 Corriente A</th>
       <th>Sensor 11 Presión psi</th>
       <th>Sensor 12 Presión psi</th>
-      <th>Sensor 13 Vibración m/sC</th>
+      <th>Sensor 13 Vibración m/s</th>
       <th>Sensor 14 Alarma</th>
       <th>Sensor 15 Alarma</th>
       <th>Sensor 16 Alarma</th>
