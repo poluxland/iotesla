@@ -15,12 +15,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_022920) do
   enable_extension "plpgsql"
 
   create_table "datos", force: :cascade do |t|
-    t.float "field1"
-    t.float "field2"
-    t.float "field3"
-    t.integer "field4"
-    t.string "field5"
-    t.string "field6"
+    t.string "modulo"
+    t.float "sensor1"
+    t.float "sensor2"
+    t.float "sensor3"
+    t.float "sensor4"
+    t.float "sensor5"
+    t.float "sensor6"
+    t.float "sensor7"
+    t.float "sensor8"
+    t.float "sensor9"
+    t.float "sensor10"
+    t.float "sensor11"
+    t.float "sensor12"
+    t.float "sensor13"
+    t.integer "sensor14"
+    t.integer "sensor15"
+    t.integer "sensor16"
+    t.integer "sensor17"
+    t.integer "sensor18"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

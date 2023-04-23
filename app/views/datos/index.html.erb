@@ -5,12 +5,25 @@
   <thead>
     <tr>
       <th>Creado</th>
-      <th>Field 1</th>
-      <th>Field 2</th>
-      <th>Field 3</th>
-      <th>Field 4</th>
-      <th>Field 5</th>
-      <th>Field 6</th>
+      <th>Modulo</th>
+      <th>Sensor 1 Temp °C</th>
+      <th>Sensor 2 Temp °C</th>
+      <th>Sensor 3 Temp °C</th>
+      <th>Sensor 4 Temp °C</th>
+      <th>Sensor 5 Temp °C</th>
+      <th>Sensor 6 Temp °C</th>
+      <th>Sensor 7 Humedad %</th>
+      <th>Sensor 8 Corriente A</th>
+      <th>Sensor 9 Corriente A</th>
+      <th>Sensor 10 Corriente A</th>
+      <th>Sensor 11 Presión psi</th>
+      <th>Sensor 12 Presión psi</th>
+      <th>Sensor 13 Vibración m/sC</th>
+      <th>Sensor 14 Alarma</th>
+      <th>Sensor 15 Alarma</th>
+      <th>Sensor 16 Alarma</th>
+      <th>Sensor 17 Alarma</th>
+      <th>Sensor 18 Alarma</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -18,12 +31,25 @@
     <% @datos.each do |dato| %>
       <tr id="<%= dom_id dato %>">
         <td><%= dato.created_at %></td>
-        <td><%= dato.field1 %></td>
-        <td><%= dato.field2 %></td>
-        <td><%= dato.field3 %></td>
-        <td><%= dato.field4 %></td>
-        <td><%= dato.field5 %></td>
-        <td><%= dato.field6 %></td>
+        <td><%= dato.modulo %></td>
+        <td><%= dato.sensor1 %></td>
+        <td><%= dato.sensor2 %></td>
+        <td><%= dato.sensor3 %></td>
+        <td><%= dato.sensor4 %></td>
+        <td><%= dato.sensor5 %></td>
+        <td><%= dato.sensor6 %></td>
+        <td><%= dato.sensor7 %></td>
+        <td><%= dato.sensor8 %></td>
+        <td><%= dato.sensor9 %></td>
+        <td><%= dato.sensor10 %></td>
+        <td><%= dato.sensor11 %></td>
+        <td><%= dato.sensor12 %></td>
+        <td><%= dato.sensor13 %></td>
+        <td><%= dato.sensor14 %></td>
+        <td><%= dato.sensor15 %></td>
+        <td><%= dato.sensor16 %></td>
+        <td><%= dato.sensor17 %></td>
+        <td><%= dato.sensor18 %></td>
         <td>
           <%= link_to "Ver", dato, class: "btn btn-primary" %>
           <%= link_to "Editar", edit_dato_path(dato), class: "btn btn-secondary" %>
