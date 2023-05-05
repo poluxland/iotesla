@@ -65,6 +65,6 @@ class DatosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dato_params
-      params.require(:dato).permit(:modulo, :sensor1, :sensor2, :sensor3, :sensor4, :sensor5, :sensor6, :sensor7, :sensor8, :sensor9, :sensor10, :sensor11, :sensor12, :sensor13, :sensor14, :sensor15, :sensor16, :sensor17, :sensor18)
+      params.require(:dato).permit(:modulo, :sensor1, :sensor2, :sensor3, :sensor4, :sensor5, :sensor6, :sensor7, :sensor8, :sensor9, :sensor10, :sensor11, :sensor12, :sensor13, :sensor14, :sensor15, :sensor16, :sensor17, :sensor18, :sensor19, :sensor20, :sensor21, :comentarios)
     end
 end
