@@ -3,7 +3,7 @@ class DatosController < ApplicationController
 
   # GET /datos or /datos.json
   def index
-    @datos = Dato.all
+    @datos = Dato.last(500)
   end
 
   # GET /datos/1 or /datos/1.json
