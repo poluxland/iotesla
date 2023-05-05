@@ -9,7 +9,7 @@
         <% if @datos.any? && @datos.last.sensor6.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor6.round(0) %></p>
         <% else %>
-          <p class="card-text text-center display-6 text-primary">No data available.</p>
+          <p class="card-text text-center display-6 text-primary">No data</p>
         <% end %>
       </div>
     </div>
@@ -22,7 +22,7 @@
         <% if @datos.any? && @datos.last.sensor7.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor7.round(0) %></p>
         <% else %>
-          <p class="card-text text-center display-6 text-primary">No data available.</p>
+          <p class="card-text text-center display-6 text-primary">No data</p>
         <% end %>
       </div>
     </div>
@@ -35,7 +35,7 @@
         <% if @datos.any? && @datos.last.sensor8.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor8.round(0) %></p>
         <% else %>
-          <p class="card-text text-center display-6 text-primary">No data available.</p>
+          <p class="card-text text-center display-6 text-primary">No data</p>
         <% end %>
       </div>
     </div>
@@ -48,7 +48,7 @@
         <% if @datos.any? && @datos.last.sensor9.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor9.round(0) %></p>
         <% else %>
-          <p class="card-text text-center display-6 text-primary">No data available.</p>
+          <p class="card-text text-center display-6 text-primary">No data</p>
         <% end %>
       </div>
     </div>
@@ -61,7 +61,7 @@
         <% if @datos.any? && @datos.last.sensor10.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor10.round(0) %></p>
         <% else %>
-          <p class="card-text text-center display-6 text-primary">No data available.</p>
+          <p class="card-text text-center display-6 text-primary">No data</p>
         <% end %>
       </div>
     </div>
@@ -76,55 +76,14 @@
         {name: 'Sensor 3 Temp', data: Dato.pluck(:created_at, :sensor3)},
         {name: 'Sensor 4 Temp', data: Dato.pluck(:created_at, :sensor4)},
         {name: 'Sensor 5 Temp', data: Dato.pluck(:created_at, :sensor5)}
-      ], height: '400px' %>
+      ], height: '300px' %>
     </div>
   </div>
 <br>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
        <div id="chart_div" style="width: 400px; height: 120px;"></div>
 
-<div class="row">
-    <div class="col-sm-2">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Presión</h5>
-          <% if @datos.any? && @datos.last.sensor9.present? %>
-            <p class="card-text"><%= @datos.last.sensor11 %></p>
-          <% else %>
-            <p class="card-text">No data available.</p>
-          <% end %>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-sm-2">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Presión</h5>
-          <% if @datos.any? && @datos.last.sensor9.present? %>
-            <p class="card-text"><%= @datos.last.sensor12 %></p>
-          <% else %>
-            <p class="card-text">No data available.</p>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-2">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Vibración</h5>
-          <% if @datos.any? && @datos.last.sensor9.present? %>
-            <p class="card-text"><%= @datos.last.sensor13 %></p>
-          <% else %>
-            <p class="card-text">No data available.</p>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
 <br>
 <br>
 <div class="row">
@@ -215,9 +174,9 @@ function drawChart() {
 
   var data = google.visualization.arrayToDataTable([
     ['Label', 'Value'],
-    ['Presión', <%= @datos.last.sensor11 %>],
-    ['Presión', <%= @datos.last.sensor12 %>],
-    ['Vibración', <%= @datos.last.sensor13 %>]
+    ['Presión', <%= @datos.last.sensor11.nil? ? 30 : @datos.last.sensor11 %>],
+    ['Presión', <%= @datos.last.sensor11.nil? ? 50 : @datos.last.sensor11 %>],
+    ['Vibración', <%= @datos.last.sensor11.nil? ? 70 : @datos.last.sensor11 %>]
   ]);
 
   var options = {
