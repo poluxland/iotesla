@@ -6,7 +6,7 @@
     <div class="card bg-light shadow">
       <div class="card-body">
         <h5 class="card-title">Temp ambiente</h5>
-        <% if @datos.any? %>
+        <% if @datos.any? && @datos.last.sensor9.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor6.round(0) %></p>
         <% else %>
           <p class="card-text text-center display-6 text-primary">No data available.</p>
@@ -19,7 +19,7 @@
     <div class="card bg-light shadow">
       <div class="card-body">
         <h5 class="card-title">Humedad</h5>
-        <% if @datos.any? %>
+        <% if @datos.any? && @datos.last.sensor9.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor7.round(0) %></p>
         <% else %>
           <p class="card-text text-center display-6 text-primary">No data available.</p>
@@ -32,7 +32,7 @@
     <div class="card bg-light shadow">
       <div class="card-body">
         <h5 class="card-title">Corriente</h5>
-        <% if @datos.any? %>
+        <% if @datos.any? && @datos.last.sensor9.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor8.round(0) %></p>
         <% else %>
           <p class="card-text text-center display-6 text-primary">No data available.</p>
@@ -45,7 +45,7 @@
     <div class="card bg-light shadow">
       <div class="card-body">
         <h5 class="card-title">Corriente</h5>
-        <% if @datos.any? %>
+        <% if @datos.any? && @datos.last.sensor9.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor9.round(0) %></p>
         <% else %>
           <p class="card-text text-center display-6 text-primary">No data available.</p>
@@ -58,7 +58,7 @@
     <div class="card bg-light shadow">
       <div class="card-body">
         <h5 class="card-title">Corriente</h5>
-        <% if @datos.any? %>
+        <% if @datos.any? && @datos.last.sensor9.present? %>
           <p class="card-text text-center display-6 text-primary"><%= @datos.last.sensor10.round(0) %></p>
         <% else %>
           <p class="card-text text-center display-6 text-primary">No data available.</p>
@@ -88,7 +88,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Presión</h5>
-          <% if @datos.any? %>
+          <% if @datos.any? && @datos.last.sensor9.present? %>
             <p class="card-text"><%= @datos.last.sensor11 %></p>
           <% else %>
             <p class="card-text">No data available.</p>
@@ -101,7 +101,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Presión</h5>
-          <% if @datos.any? %>
+          <% if @datos.any? && @datos.last.sensor9.present? %>
             <p class="card-text"><%= @datos.last.sensor12 %></p>
           <% else %>
             <p class="card-text">No data available.</p>
@@ -114,7 +114,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Vibración</h5>
-          <% if @datos.any? %>
+          <% if @datos.any? && @datos.last.sensor9.present? %>
             <p class="card-text"><%= @datos.last.sensor13 %></p>
           <% else %>
             <p class="card-text">No data available.</p>
